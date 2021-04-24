@@ -37,7 +37,7 @@ namespace Topicos.NorthWnd.Model.Models
 
             modelBuilder.Entity<Category>(entity =>
             {
-                entity.HasIndex(e => e.CategoryName, "CategoryName");
+                //entity.HasIndex(e => e.CategoryName, "CategoryName");
 
                 entity.Property(e => e.CategoryId).HasColumnName("CategoryID");
 
@@ -52,15 +52,15 @@ namespace Topicos.NorthWnd.Model.Models
 
             modelBuilder.Entity<Product>(entity =>
             {
-                entity.HasIndex(e => e.CategoryId, "CategoriesProducts");
+                //entity.HasIndex(e => e.CategoryId, "CategoriesProducts");
 
-                entity.HasIndex(e => e.CategoryId, "CategoryID");
+                //entity.HasIndex(e => e.CategoryId, "CategoryID");
 
-                entity.HasIndex(e => e.ProductName, "ProductName");
+                //entity.HasIndex(e => e.ProductName, "ProductName");
 
-                entity.HasIndex(e => e.SupplierId, "SupplierID");
+                //entity.HasIndex(e => e.SupplierId, "SupplierID");
 
-                entity.HasIndex(e => e.SupplierId, "SuppliersProducts");
+                //entity.HasIndex(e => e.SupplierId, "SuppliersProducts");
 
                 entity.Property(e => e.ProductId).HasColumnName("ProductID").ValueGeneratedOnAdd();
 
@@ -97,9 +97,9 @@ namespace Topicos.NorthWnd.Model.Models
 
             modelBuilder.Entity<Supplier>(entity =>
             {
-                entity.HasIndex(e => e.CompanyName, "CompanyName");
+                //entity.HasIndex(e => e.CompanyName, "CompanyName");
 
-                entity.HasIndex(e => e.PostalCode, "PostalCode");
+                //entity.HasIndex(e => e.PostalCode, "PostalCode");
 
                 entity.Property(e => e.SupplierId).HasColumnName("SupplierID");
 

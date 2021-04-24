@@ -30,8 +30,9 @@ namespace Products.API.Controllers
         }
 
 
+        [HttpGet]
         [Route("GetProduct", Name = "GetProduct")]
-        public IActionResult GetProduct([System.Web.Http.FromUri] int id)
+        public IActionResult GetProduct(int id)
         {
             var elServicio = new Topicos.NorthWnd.BL.Logica.Servicio.NWProduct();
             var elResultadoRecibido = elServicio.QryPorId(id);

@@ -20,6 +20,7 @@ namespace NorthwindWebApp.Controllers
 
         public IActionResult Index()
         {
+            _logger.Log(LogLevel.Information, "Estoy abriendo el Index!!!! Felicitaciones.");
             return View();
         }
 
